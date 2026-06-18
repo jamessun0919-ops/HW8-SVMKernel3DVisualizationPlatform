@@ -400,7 +400,7 @@ def plot_decision_boundary(model, X, y, scaler, title, ax):
     if hasattr(model, "support_vectors_"):
         sv = model.support_vectors_
         ax.scatter(sv[:, 0], sv[:, 1], s=120, facecolors="none",
-                   edgecolors="yellow", linewidths=2, label=T("train_sv"))
+                   edgecolors="yellow", linewidths=2, label="Support Vectors")
         ax.legend()
 
     ax.set_title(title, fontsize=12, fontweight="bold")
@@ -699,8 +699,8 @@ def page_model_training():
     ax_cm.imshow(cm, interpolation="nearest", cmap="Blues")
     ax_cm.set_xticks([0, 1])
     ax_cm.set_yticks([0, 1])
-    ax_cm.set_xlabel(T("train_predicted"), fontsize=12)
-    ax_cm.set_ylabel(T("train_actual"), fontsize=12)
+    ax_cm.set_xlabel("Predicted", fontsize=12)
+    ax_cm.set_ylabel("Actual", fontsize=12)
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
             ax_cm.text(j, i, str(cm[i, j]), ha="center", va="center", fontsize=16)
