@@ -289,13 +289,17 @@ def T(key):
 st.markdown(
     """
 <style>
-    .main-header { font-size: 2.2rem; font-weight: 800; color: #1a1a2e;
-                   text-align: center; padding: 1rem 0; }
-    .sub-header { font-size: 1.4rem; font-weight: 600; color: #16213e;
-                  padding: 0.5rem 0; }
-    .card { background: #f8f9fa; border-radius: 10px; padding: 1.5rem;
+    .main-header { font-size: 2.2rem; font-weight: 800; color: #ffffff;
+                   text-align: center; padding: 1.2rem 1rem;
+                   background: linear-gradient(135deg, #1a1a2e, #16213e);
+                   border-radius: 12px; margin-bottom: 0.5rem;
+                   box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .sub-header { font-size: 1.5rem; font-weight: 700; color: #00B4D8;
+                  padding: 0.5rem 0; border-bottom: 3px solid #00B4D8;
+                  margin-bottom: 0.5rem; }
+    .card { background: #ffffff; border-radius: 10px; padding: 1.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 0.5rem 0;
-            color: #1a1a2e; }
+            color: #1a1a2e; border: 1px solid #e0e0e0; }
     .card h3, .card h4, .card p, .card li, .card b, .card td, .card th { color: #1a1a2e; }
     .metric-box { background: linear-gradient(135deg, #667eea, #764ba2);
                   color: white; border-radius: 8px; padding: 1rem;
@@ -304,7 +308,6 @@ st.markdown(
     .formula { font-family: 'Courier New', monospace;
                background: #2d2d2d; color: #f8f8f2; padding: 0.8rem;
                border-radius: 5px; font-size: 1.1rem; }
-    .lang-btn { text-align: center; padding: 0.3rem 0; }
 </style>
 """,
     unsafe_allow_html=True,
