@@ -706,11 +706,6 @@ def page_3d_kernel_demo():
     z = compute_kernel_z(X, kernel)
     formula = kernel_formula_str(kernel)
 
-    st.markdown("### 2D → 3D Lift Animation")
-    fig_anim = plotly_kernel_lift_animation(X, y, kernel, z)
-    anim_key = f"anim_{dataset}_{kernel}_{n_samples}_{noise}"
-    st.plotly_chart(fig_anim, use_container_width=True, key=anim_key)
-
     st.markdown(f"""
     <div class="card">
     <b>{formula}</b><br>
